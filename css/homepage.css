@@ -1,0 +1,741 @@
+/* Change Parallax Image*/
+.main-btn {
+  padding: 5px 20px;
+  transition: 0.2s;
+  background: #FFD600;
+  color: #fff;
+  border: 1px solid #FFD600;
+  border-radius: 5px;
+}
+.main-btn:hover {
+  background: #bd9f00;
+}
+
+.main-head {
+  display: inline-block;
+  font-size: 50px;
+  padding: 10px 20px;
+  background: #FFD600;
+  color: #0f0f0f;
+  font-weight: bold;
+  position: relative;
+}
+.main-head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 90%;
+  border: 4px solid #0f0f0f;
+}
+
+* {
+  font-family: "Fjalla One", sans-serif;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #FFD600;
+  color: #fff;
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/pattern.png");
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.section-head {
+  background: #0f0f0f;
+}
+.section-head p {
+  color: #A2ABB6;
+  font-size: 25px;
+  width: 80%;
+  margin: auto;
+}
+.section-head p span {
+  color: #FFD600;
+}
+
+.navb {
+  height: 70px;
+}
+.navb .navbar {
+  background: #151515;
+}
+.navb .navbar .navbar-brand {
+  color: #333;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 1px 1px 10px #000, -1px -1px #484848;
+  transition: 0.3s;
+}
+.navb .navbar .navbar-brand:hover {
+  color: #FFD600;
+}
+.navb .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #A2ABB6;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.navb .navbar .navbar-collapse .navbar-nav .nav-item.active .nav-link, .navb .navbar .navbar-collapse .navbar-nav .nav-item:hover .nav-link {
+  color: #FFD600;
+}
+@media (max-width: 991px) {
+  .navb .navbar .navbar-collapse {
+    background: black;
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 9999;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 100%;
+  }
+}
+
+/*Start Footer*/
+.footer {
+  background: #FFD600;
+}
+.footer .heading {
+  font-size: 60px;
+}
+.footer ul li {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.footer ul li svg {
+  font-size: 20px;
+  margin-top: 16px;
+  transition: 0.3s;
+}
+.footer ul li:hover {
+  color: #fff;
+}
+.footer ul li:hover svg {
+  transform: translateY(-36px);
+}
+.footer ul li:hover.mail {
+  background: #666666;
+}
+.footer ul li:hover.behance {
+  background: #18a3fe;
+}
+.footer ul li:hover.delicious {
+  background: #3274d1;
+}
+.footer ul li:hover.deviantart {
+  background: #d0de21;
+}
+.footer ul li:hover.facebook {
+  background: #3b5998;
+}
+.footer ul li:hover.flickr {
+  background: #f1628b;
+}
+.footer ul li:hover.forrst {
+  background: #5b9a68;
+}
+.footer .copyright span {
+  width: 20px;
+  height: 20px;
+}
+
+/*End Footer*/
+/*Start go-top*/
+.go-top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 999;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/*End go-top*/
+header {
+  background: #222 url("../images/parallax4.jpg") center no-repeat;
+  background-size: cover;
+  background-position-y: 0px;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  transition: 0s;
+}
+header .home-header {
+  text-transform: uppercase;
+  color: #000;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .home-header h1 {
+  margin: auto;
+  font-size: 4vmax;
+  font-weight: bold;
+  padding: 20px;
+  border: 8px solid #000;
+  transition: 0.2s;
+  cursor: pointer;
+}
+header .home-header h1:hover {
+  color: #fff;
+  border: 8px solid #fff;
+}
+header .home-header .slider {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+header .home-header .slider .content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+header .home-header .slider .content li {
+  list-style: none;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 5vmax;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header .home-header .slider .content li.prev {
+  top: -170px;
+  position: absolute !important;
+}
+header .home-header .slider .content li.next {
+  top: 170px;
+  position: absolute !important;
+}
+header .home-header .slider .content li.active {
+  transform: translate(0%, 0%);
+  position: relative;
+  top: 17px;
+}
+header .home-header .slider .content li span {
+  color: #FFD600;
+}
+header .home-header .slider ol li {
+  width: 13px;
+  height: 13px;
+  background: #222;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+header .home-header .slider ol li.active {
+  background: #fff;
+}
+
+/*Start About*/
+.about {
+  color: #fff;
+}
+.about .about-us {
+  background: #0f0f0f;
+}
+.about .about-us .text p {
+  font-size: 25px;
+  color: #A2ABB6;
+}
+.about .about-us .text p span {
+  color: #FFD600;
+  font-weight: bold;
+}
+.about .what-we-do {
+  background: #181818;
+}
+.about .what-we-do .title {
+  color: #A2ABB6;
+  font-size: 18px;
+}
+.about .what-we-do .info {
+  color: #FFD600;
+  font-size: 25px;
+}
+.about .what-we-do .content .box {
+  width: 70%;
+  height: 150px;
+  border-radius: 10px;
+  background: #FFD600;
+  position: relative;
+  display: flex;
+}
+.about .what-we-do .content .box svg {
+  margin: auto;
+}
+.about .what-we-do .content .box::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%) rotateZ(45deg);
+  background: #FFD600;
+}
+.about .what-we-do .content .text {
+  color: #A2ABB6;
+}
+.about .what-we-do .content .text p {
+  font-size: 13px;
+}
+.about .how-agency {
+  background: #0f0f0f;
+}
+.about .how-agency .info {
+  color: #A2ABB6;
+  font-size: 25px;
+}
+.about .how-agency .box .num {
+  font-size: 60px;
+  color: #FFD600;
+}
+.about .how-agency .box .text {
+  color: #A2ABB6;
+  font-size: 15px;
+}
+
+/*End About*/
+/*Start parallax1*/
+.parallax1 {
+  height: 500px;
+  background: url("../images/sec/sec1.jfif") center no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+  transition: 0s;
+  position: relative;
+}
+.parallax1 .container {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.parallax1 .container .text {
+  color: #fff;
+}
+.parallax1 .container .text .content {
+  font-size: 30px;
+}
+.parallax1 .container .text .content svg {
+  color: #FFD600;
+}
+.parallax1 .container .text .name {
+  font-style: italic;
+  font-size: 15px;
+}
+
+/*End parallax1*/
+/*Start Team*/
+.team .how-are-we {
+  background: #181818;
+}
+.team .how-are-we .text .head {
+  color: #A2ABB6;
+  font-size: 18px;
+}
+.team .how-are-we .text .info {
+  color: #FFD600;
+  font-size: 25px;
+}
+.team .how-are-we .box .image {
+  position: relative;
+}
+.team .how-are-we .box .image .overlay {
+  opacity: 0;
+  transition: 0.1s;
+}
+.team .how-are-we .box .image .overlay .overlay-content {
+  opacity: 0;
+  transition: 0.4s;
+  transform: translateY(-40px);
+}
+.team .how-are-we .box .image .overlay .overlay-content span {
+  color: #A2ABB6;
+  font-size: 20px;
+}
+.team .how-are-we .box .image:hover .overlay {
+  opacity: 1;
+}
+.team .how-are-we .box .image:hover .overlay-content {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.team .how-are-we .box .content {
+  background: #0f0f0f;
+  color: #A2ABB6;
+  transition: 0.3s;
+}
+.team .how-are-we .box:hover .content {
+  background: #FFD600;
+  color: #fff;
+}
+
+/*End Team*/
+/*Start clients*/
+.clients {
+  background: #0f0f0f;
+}
+.clients h3 {
+  color: #A2ABB6;
+  font-size: 25px;
+}
+.clients .our-clients {
+  border-top: 1px solid #181818;
+  border-bottom: 1px solid #181818;
+}
+.clients .our-clients .box {
+  width: 100px;
+  height: 80px;
+}
+.clients p {
+  font-size: 15px;
+  color: #A2ABB6;
+}
+
+/*End clients*/
+/*Start parallax2*/
+.parallax2, .parallax3 {
+  height: 500px;
+  background: url("../images/sec/sec2.jfif") center no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+  transition: 0s;
+  position: relative;
+}
+.parallax2 .container, .parallax3 .container {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.parallax2 .content .top-item, .parallax3 .content .top-item {
+  flex-wrap: wrap;
+}
+.parallax2 .content .top-item .icon, .parallax3 .content .top-item .icon {
+  background: #FFD600;
+  width: 65px;
+  height: 65px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+}
+.parallax2 .content .top-item .icon svg, .parallax3 .content .top-item .icon svg {
+  font-size: 22px;
+}
+.parallax2 .content .top-item .title a, .parallax3 .content .top-item .title a {
+  font-size: 23px;
+  color: #FFD600;
+  transition: 0.2s;
+}
+.parallax2 .content .top-item .title a:hover, .parallax3 .content .top-item .title a:hover {
+  text-decoration: none;
+  color: #bd9f00;
+}
+.parallax2 .content .parallax-slider .items, .parallax3 .content .parallax-slider .items {
+  border-top: 1px solid #A2ABB6;
+  border-bottom: 1px solid #A2ABB6;
+  width: 80%;
+}
+.parallax2 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p, .parallax3 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p {
+  color: #fff;
+  font-size: 18px;
+}
+.parallax2 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p span, .parallax3 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p span {
+  color: #FFD600;
+}
+.parallax2 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p span a, .parallax3 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p span a {
+  color: inherit;
+  transition: 0.2s;
+}
+.parallax2 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p span a:hover, .parallax3 .content .parallax-slider .items .carousel .carousel-inner .carousel-item p span a:hover {
+  text-decoration: none;
+  color: #bd9f00;
+}
+.parallax2 .content .parallax-slider .chevrons, .parallax3 .content .parallax-slider .chevrons {
+  position: relative;
+  margin-top: 20px;
+}
+.parallax2 .content .parallax-slider .chevrons .chev, .parallax3 .content .parallax-slider .chevrons .chev {
+  position: static;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #ddd;
+  border: 2px solid #fff;
+  background: #FFD600;
+  opacity: 1;
+  transition: 0.2s;
+}
+.parallax2 .content .parallax-slider .chevrons .chev:hover, .parallax3 .content .parallax-slider .chevrons .chev:hover {
+  background: #bd9f00;
+}
+/*End parallax2*/
+/*Start Services*/
+.services .services-content {
+  background: #181818;
+  color: #A2ABB6;
+}
+.services .services-content .box {
+  background: #0f0f0f;
+  transition: 0.3s;
+}
+.services .services-content .box .icon {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  padding: 0;
+  color: #fff;
+  transition: 0.2s;
+}
+.services .services-content .box .icon::after {
+  border-radius: 50%;
+  width: 95%;
+  height: 95%;
+  transition: 0.2s;
+}
+.services .services-content .box p {
+  font-size: 15px;
+  color: #A2ABB6;
+  transition: 0.2s;
+}
+.services .services-content .box .services-title {
+  font-size: 20px;
+}
+.services .services-content .box ul li {
+  list-style: none;
+  font-size: 15px;
+  border-bottom: 1px dashed #181818;
+}
+.services .services-content .box ul li:last-of-type {
+  border-bottom: 0;
+}
+.services .services-content .box:hover {
+  background: #FFD600;
+  color: #0f0f0f;
+}
+.services .services-content .box:hover p {
+  color: #0f0f0f;
+}
+.services .services-content .box:hover .icon {
+  background: #fff;
+}
+.services .services-content .box:hover .icon svg {
+  color: #FFD600;
+  transition: 0.2s;
+}
+.services .services-content .box:hover .icon::after {
+  border-color: #FFD600;
+}
+.services .conversation {
+  background: #0f0f0f;
+}
+.services .conversation span {
+  color: #A2ABB6;
+  font-size: 25px;
+}
+
+.parallax3 {
+  height: 500px;
+  background: url("../images/sec/sec3.jfif") center no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+  transition: 0s;
+  position: relative;
+}
+.parallax3 .container {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.parallax3 .title a {
+  color: #fff !important;
+}
+.parallax3 .parallax-slider .items p {
+  font-size: 15px !important;
+}
+.parallax3 .parallax-slider .name {
+  color: #fff;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/*End Services*/
+/*Start portfolio*/
+.portfolio .our-portfolio {
+  background: #0f0f0f;
+}
+.portfolio .our-portfolio .btns button {
+  border: 2px solid #A2ABB6;
+  color: #A2ABB6;
+  background: transparent;
+  outline: none;
+}
+.portfolio .our-portfolio .btns button.mixitup-control-active {
+  color: #FFD600;
+  border-color: #FFD600;
+}
+.portfolio .our-portfolio .mixit-port .image {
+  position: relative;
+  cursor: pointer;
+}
+.portfolio .our-portfolio .mixit-port .image .port-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 214, 0, 0.5);
+  color: #fff;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.4s;
+  transform-origin: bottom;
+  z-index: 2;
+}
+.portfolio .our-portfolio .mixit-port .image .port-overlay .title {
+  font-size: 25px;
+}
+.portfolio .our-portfolio .mixit-port .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 214, 0, 0.8);
+  z-index: 1;
+  transition: 0.3s;
+  transform-origin: bottom left;
+  transform: scale(0);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.portfolio .our-portfolio .mixit-port .image:hover .port-overlay {
+  transform: scale(1);
+  opacity: 1;
+  transform-origin: bottom right;
+}
+.portfolio .our-portfolio .mixit-port .image:hover::after {
+  transition-delay: 0.25s;
+  transform: scale(1);
+  border-radius: 0;
+}
+
+/*End portfolio*/
+/*Start parallax4*/
+.parallax4 {
+  height: 500px;
+  background: url("../images/parallax4.jpg") center no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+  transition: 0s;
+  position: relative;
+}
+.parallax4 .container {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.parallax4 .content {
+  color: #fff;
+}
+.parallax4 .content ul li {
+  font-size: 5vmax;
+  background: url(../images/parallax4.jpg) no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.parallax4 .content p {
+  font-size: 4vmax;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
+
+/*End parallax4*/
+/*Start contact-us*/
+.contact-us form input,
+.contact-us form textarea {
+  background: #191919;
+  border: 1px solid #191919;
+  color: #747474;
+  height: 50px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.contact-us form input:focus,
+.contact-us form textarea:focus {
+  outline: none;
+}
+.contact-us form textarea {
+  height: 100px;
+  max-height: 170px;
+}
+.contact-us .result .error {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #ffe9e9;
+  border: 1px solid #e99f9f;
+  color: #d25c5a;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  opacity: 0;
+}
+
+/*End contact-us*/
+
+/*# sourceMappingURL=homepage.css.map */
